@@ -1,5 +1,18 @@
 # Tutorial from:
-https://blog.miguelgrinberg.com/post/how-to-create-a-react--flask-project
+Part 1: https://blog.miguelgrinberg.com/post/how-to-create-a-react--flask-project
+Part 2: https://blog.miguelgrinberg.com/post/how-to-deploy-a-react--flask-project
+
+brew install yarn
+
+# To run local flask
+yarn start-api
+
+# Server to run flask apps...
+https://gunicorn.org/
+pip install gunicorn
+
+# To run the app in gunicorn
+gunicorn -w 4 api:app
 
 # Getting Started with Create React App
 
