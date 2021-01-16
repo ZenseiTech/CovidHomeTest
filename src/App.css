@@ -1,38 +1,52 @@
-.App {
+
+.btn-primary, .btn-primary:hover, .btn-primary:active, .btn-primary:visited {
+  background-color: #1b8614 !important;
+}
+
+.themed-grid-col {
+padding-top: .75rem;
+padding-bottom: .75rem;
+/*background-color: rgba(86, 61, 124, .15);*/
+border: 1px solid rgba(169, 182, 206, 0.43);
+border-width: 1px;
+}
+
+.themed-container {
+padding: .75rem;
+margin-bottom: 1.5rem;
+background-color: rgba(0, 123, 255, .15);
+border: 1px solid rgba(0, 123, 255, .2);
+}
+
+/* .row {
+border: 1px solid rgba(86, 61, 124, .2);
+} */
+
+
+/* Styles for wrapping the search box */
+.main {
+  width: 50%;
+  margin: 50px auto;
+}
+
+/* Bootstrap 4 text input with search icon */
+
+.has-search .form-control {
+  padding-left: 2.375rem;
+}
+
+.has-search .form-control-feedback {
+  position: absolute;
+  z-index: 2;
+  display: block;
+  width: 2.375rem;
+  height: 2.375rem;
+  line-height: 2.375rem;
   text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
   pointer-events: none;
+  color: #aaa;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+body, #images, #images a {
+ font-family: 'Century Gothic', Arial, Helvetica, sans-serif, cursive;
 }
