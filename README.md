@@ -2,10 +2,15 @@
 Part 1: https://blog.miguelgrinberg.com/post/how-to-create-a-react--flask-project
 Part 2: https://blog.miguelgrinberg.com/post/how-to-deploy-a-react--flask-project
 
+# Install yarn
 brew install yarn
 
 # To run local flask
 yarn start-api
+
+# create python virtual environment
+python3 -m venv venv
+source venv/bin/activate
 
 # Server to run flask apps...
 https://gunicorn.org/
