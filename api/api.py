@@ -1,5 +1,23 @@
-import time
+import datetime
+import sys
+import sqlite3
+
 from flask import Flask
+# from flask_cors import CORS
+from werkzeug.utils import redirect
+from flask import request
+
+# lt --port 5000 --subdomain labkits
+
+from api.repository import get_db, query_db, close_connection
+
+
+dict_pages_to = {
+            'Everlywell': 'https://www.everlywell.com/products/covid-19-test/',
+            'LetsGetChecked': 'https://www.letsgetchecked.com/us/en/home-coronavirus-test/',
+            'Picture by Fulgent Genetics':'https://picturegenetics.com/covid19'
+}
+
 
 # app = Flask(__name__)
 app = Flask(__name__, static_folder='../build', static_url_path='/')
@@ -10,6 +28,37 @@ def index():
     return app.send_static_file('index.html')
 
 
-@app.route('/api/time')
-def get_current_time():
-    return {'time': time.time()}
+@app.route('/redirect')
+def redirect_to():
+    page_to = request.args.get('page_to')
+    update_number_of_clicks(page_to)
+    return redirect(dict_pages_to[page_to])
+
+
+def update_number_of_clicks(page_to):
+    found = False;
+    time = str(datetime.datetime.now())
+
+    try:
+        for page in query_db("select l.NumberOfClicks, l.page_to from labkits l where Page_to = ?;", [page_to], one=False):
+            found = True
+            print(page[1], 'has clicks', page[0])
+            get_db().execute('''UPDATE labkits SET NumberOfClicks = ?, ClickedDate = ?
+               WHERE Page_To = ?''', (page[0] + 1, time, page_to))
+            get_db().commit()
+
+
+        if not found:
+            get_db().execute('''INSERT INTO labkits(NumberOfClicks, ClickedDate, Page_To) 
+                    values (?, ?, ?)''', (1, time, page_to))
+            get_db().commit()
+    except sqlite3.Error as error:
+        print("Failed to update sqlite table", error)
+        get_db().rollback()
+
+    finally:
+        close_connection()
+
+# if(__name__ == '__main__'):
+#     print("====>" + str(sys.path))
+#     app.run(debug = True)
