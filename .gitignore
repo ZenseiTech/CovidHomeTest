@@ -12,7 +12,7 @@
 /build
 
 # development database
-/api/database.db
+api/database.db
 
 # misc
 .DS_Store
