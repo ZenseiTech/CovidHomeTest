@@ -15,7 +15,13 @@ from api.repository import get_db, query_db, close_connection
 dict_pages_to = {
             'Everlywell': 'https://www.everlywell.com/products/covid-19-test/',
             'LetsGetChecked': 'https://www.letsgetchecked.com/us/en/home-coronavirus-test/',
-            'Picture_by_Fulgent_Genetics':'https://picturegenetics.com/covid19'
+            'Picture_by_Fulgent_Genetics':'https://picturegenetics.com/covid19',
+            'Pixel_by_LabCorp': 'https://www.pixel.labcorp.com/covid-19',
+            'Vitagene': 'https://vitagene.com/products/covid-19-saliva-test-kit/',
+            'P23LABS': 'https://p23labs.com/covid-19-kit',
+            'Vault_Health': 'https://www.vaulthealth.com/COVID',
+            'For_Hers': 'https://www.forhers.com/covid-test',
+            'Phosphorus': 'https://www.phosphorus-c19-pcr.com/order-now/p/covid-19-rt-qpcr-test'
 }
 
 

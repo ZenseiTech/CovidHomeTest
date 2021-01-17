@@ -39,6 +39,54 @@ class App extends React.Component {
           "cardRedirect": apiServer + apiUrl + "Picture_by_Fulgent_Genetics",
           "price": "$109.00"
         },
+        {
+          "id": 4,
+          "cardTitled": "Pixel by LabCorp",
+          "cardText": "Safe and trusted testing available at no upfront cost to you.",
+          "cardImage": "https://www.pixel.labcorp.com/sites/default/files/field/image/blog_post/covid-19_thumbnail_v4.jpg",
+          "cardRedirect": apiServer + apiUrl + "Pixel_by_LabCorp",
+          "price": "$0.00"
+        },
+        {
+          "id": 5,
+          "cardTitled": "Vitagene",
+          "cardText": "The First FDA Emergency Use Authorized at-home COVID-19 Saliva test. Includes FedEx Overnight Shipping to the Lab and an official lab report. Can be used for travel in many circumstances.",
+          "cardImage": "https://cdn-vitagene.pressidium.com/wp-content/uploads/2020/08/covid-19-test-kit-main-shdw.png",
+          "cardRedirect": apiServer + apiUrl + "Vitagene",
+          "price": "$117.00"
+        },
+        {
+          "id": 6,
+          "cardTitled": "P23 LABS",
+          "cardText": "Order your P23 at-home covid-19 collection kit for testing",
+          "cardImage": "https://www.jotform.com/uploads/p23labs/form_files/P23%20site%20logo.5f0a9237db6bc7.22534928.jpg",
+          "cardRedirect": apiServer + apiUrl + "P23LABS",
+          "price": "Unknown"
+        },
+        {
+          "id": 7,
+          "cardTitled": "Vault Health",
+          "cardText": "We have teamed up with Infinity BiologiX and Spectrum Solutions to offer saliva testing in your home for the novel coronavirus, SARS-CoV-2, the virus that causes COVID-19.",
+          "cardImage": "https://www.vaulthealth.com/static/images/covid/hero-covid-test.jpg",
+          "cardRedirect": apiServer + apiUrl + "Vault_Health",
+          "price": "119.00"
+        },
+         {
+          "id": 8,
+          "cardTitled": "For Hers",
+          "cardText": "This at-home kit tests for COVID-19 without invasive swabs or having to visit an in-person test site. Start by telling us about your symptoms to help determine if this test is right for you before you're charged.",
+          "cardImage": "https://res.cloudinary.com/forhims/image/upload/q_auto,f_auto,fl_lossy/Hims-d-Covid-PDP-Hero-03",
+          "cardRedirect": apiServer + apiUrl + "For_Hers",
+          "price": "150.00"
+        },
+         {
+          "id": 9,
+          "cardTitled": "Phosphorus",
+          "cardText": "The Phosphorus qPCR test is validated to detect active SARS-CoV-2 virus in individuals experiencing symptoms of COVID-19. After an online medical screen, your at-home sample collection kit will be shipped to you. Samples are processed in our Secaucus, NJ laboratory and we aim to make them available within 72 hours from receipt.",
+          "cardImage": "https://images.squarespace-cdn.com/content/v1/5ed7b880ff76d55e5f18e6f5/1606252112856-5T3862TSG99C0MGLSWFG/ke17ZwdGBToddI8pDm48kJE4MoaoPpgv4LNotVtbieF7gQa3H78H3Y0txjaiv_0fDoOvxcdMmMKkDsyUqMSsMWxHk725yiiHCCLfrh8O1z4YTzHvnKhyp6Da-NYroOW3ZGjoBKy3azqku80C789l0s2R59z2HWVKMNU9GXmUK4X5kVZLrUvUGmN9hO26jUWKKIKuvOYrPn_rqsrHe2ljWA/open+kit.jpg?format=500w",
+          "cardRedirect": apiServer + apiUrl + "Phosphorus",
+          "price": "155.00"
+        },
       ]
     });
   }
