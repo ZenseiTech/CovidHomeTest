@@ -15,7 +15,7 @@ from api.repository import get_db, query_db, close_connection
 dict_pages_to = {
             'Everlywell': 'https://www.everlywell.com/products/covid-19-test/',
             'LetsGetChecked': 'https://www.letsgetchecked.com/us/en/home-coronavirus-test/',
-            'Picture by Fulgent Genetics':'https://picturegenetics.com/covid19'
+            'Picture_by_Fulgent_Genetics':'https://picturegenetics.com/covid19'
 }
 
 
