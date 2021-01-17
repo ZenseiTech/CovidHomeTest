@@ -17,7 +17,11 @@ https://gunicorn.org/
 pip install gunicorn
 
 # To run the app in gunicorn
-gunicorn -w 4 api:app
+#### export NODE_ENV='production'
+#### Run from the root of your app ...
+gunicorn -w 4 main:app
+
+<!-- "start-api": "cd api && venv/bin/flask run --no-debugger", -->
 
 # Getting Started with Create React App
 

@@ -42,7 +42,7 @@ def redirect_to():
 
 
 def update_number_of_clicks(page_to):
-    found = False;
+    found = False
     time = str(datetime.datetime.now())
 
     try:
