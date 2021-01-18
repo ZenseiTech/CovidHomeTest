@@ -2,6 +2,11 @@
 Part 1: https://blog.miguelgrinberg.com/post/how-to-create-a-react--flask-project
 Part 2: https://blog.miguelgrinberg.com/post/how-to-deploy-a-react--flask-project
 
+# connect to your AWS Linux instance
+https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/AccessingInstances.html?icmpid=docs_ec2_console
+
+https://towardsdatascience.com/deploying-a-python-web-app-on-aws-57ed772b2319
+
 # Install yarn
 brew install yarn
 
@@ -19,7 +24,11 @@ pip install gunicorn
 # To run the app in gunicorn
 #### export NODE_ENV='production'
 #### Run from the root of your app ...
-gunicorn -w 4 main:app
+gunicorn -w 4 main:app -b 0.0.0.0:5000 --access-logfile .log/access.log --error-logfile .log/general.log
+
+mkdir .log 2> /dev/null
+DEBUG=0 authbind gunicorn -b 0.0.0.0:5000 backend:app --access-logfile .log/access.log --error-logfile .log/general.log
+
 
 <!-- "start-api": "cd api && venv/bin/flask run --no-debugger", -->
 

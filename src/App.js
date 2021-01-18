@@ -11,11 +11,6 @@ class App extends React.Component {
 
   setItems = () => {
     let apiServer= "http://localhost:5000";
-    
-    if(process.env.NODE_ENV === 'production') {
-      apiServer = 'http://localhost:8000'
-    }
-
 
     const apiUrl= "/redirect?page_to=";
 
