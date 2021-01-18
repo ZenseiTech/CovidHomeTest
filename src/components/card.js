@@ -1,5 +1,5 @@
 import React from 'react';
-
+import Images from './card_images';
 
 const card = (props) => {
     
@@ -22,6 +22,10 @@ const card = (props) => {
                     </p>
                 </div>
             </div>
+            {props.images.split(",").map(item => (
+                <Images card_image={item}/>
+          ))}
+            
         </div>
     );
 }

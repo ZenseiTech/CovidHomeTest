@@ -7,7 +7,7 @@
 padding-top: .75rem;
 padding-bottom: .75rem;
 /*background-color: rgba(86, 61, 124, .15);*/
-border: 1px solid rgba(169, 182, 206, 0.43);
+border: 1px solid rgba(68, 70, 75, 0.43);
 border-width: 1px;
 }
 
@@ -49,4 +49,8 @@ border: 1px solid rgba(86, 61, 124, .2);
 
 body, #images, #images a {
  font-family: 'Century Gothic', Arial, Helvetica, sans-serif, cursive;
+}
+
+.card-title {
+  font-weight: bold;
 }

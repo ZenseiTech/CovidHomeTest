@@ -26,6 +26,8 @@ yarn-debug.log*
 yarn-error.log*
 
 /api/venv
+/venv
+
 __pycache__
 
 .eslintcache
