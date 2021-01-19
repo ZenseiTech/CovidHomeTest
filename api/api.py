@@ -1,16 +1,17 @@
 import datetime
-import sys
 import sqlite3
 
 from flask import Flask
-# from flask_cors import CORS
 from werkzeug.utils import redirect
 from flask import request
+import logging
 
 # lt --port 5000 --subdomain labkits
 
 from api.repository import get_db, query_db, close_connection
 
+# logging.basicConfig(level=logging.DEBUG)
+logging.basicConfig(format='%(asctime)s - %(message)s', level=logging.DEBUG)
 
 dict_pages_to = {
             'Everlywell': 'https://www.everlywell.com/products/covid-19-test/',
@@ -26,15 +27,15 @@ dict_pages_to = {
 
 
 # app = Flask(__name__)
-app = Flask(__name__, static_folder='../build', static_url_path='/')
+application = Flask(__name__, static_folder='../build', static_url_path='/')
 
 
-@app.route('/')
+@application.route('/')
 def index():
-    return app.send_static_file('index.html')
+    return application.send_static_file('index.html')
 
 
-@app.route('/redirect')
+@application.route('/redirect')
 def redirect_to():
     page_to = request.args.get('page_to')
     update_number_of_clicks(page_to)
@@ -48,7 +49,8 @@ def update_number_of_clicks(page_to):
     try:
         for page in query_db("select l.NumberOfClicks, l.page_to from labkits l where Page_to = ?;", [page_to], one=False):
             found = True
-            print(page[1], 'has clicks', page[0])
+            # print(page[1], 'has clicks', page[0])
+            logging.debug('%s has clicks %s', page[1], page[0])
             get_db().execute('''UPDATE labkits SET NumberOfClicks = ?, ClickedDate = ?
                WHERE Page_To = ?''', (page[0] + 1, time, page_to))
             get_db().commit()
@@ -59,12 +61,9 @@ def update_number_of_clicks(page_to):
                     values (?, ?, ?)''', (1, time, page_to))
             get_db().commit()
     except sqlite3.Error as error:
-        print("Failed to update sqlite table", error)
+        logging.debug('Failed to update sqlite table $s', error)
         get_db().rollback()
 
     finally:
         close_connection()
 
-# if(__name__ == '__main__'):
-#     print("====>" + str(sys.path))
-#     app.run(debug = True)

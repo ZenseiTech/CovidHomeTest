@@ -14,8 +14,7 @@ brew install yarn
 yarn start-api
 
 # create python virtual environment
-python3 -m venv venv
-source venv/bin/activate
+python3 -m venv venv && source venv/bin/activate
 
 # Server to run flask apps...
 https://gunicorn.org/
@@ -24,7 +23,7 @@ pip install gunicorn
 # To run the app in gunicorn
 #### export NODE_ENV='production'
 #### Run from the root of your app ...
-gunicorn -w 4 main:app -b 0.0.0.0:5000 --access-logfile .log/access.log --error-logfile .log/general.log
+gunicorn -w 4 application:application -b 0.0.0.0:5000 --access-logfile .log/access.log --error-logfile .log/general.log
 
 mkdir .log 2> /dev/null
 DEBUG=0 authbind gunicorn -b 0.0.0.0:5000 backend:app --access-logfile .log/access.log --error-logfile .log/general.log
