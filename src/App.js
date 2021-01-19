@@ -10,9 +10,8 @@ class App extends React.Component {
 
 
   setItems = () => {
-    let apiServer= window.location.href;
-
-    const apiUrl= "/redirect?page_to=";
+    let apiServer = window.location.href;
+    const apiUrl = "redirect?page_to=";
 
     this.setState({
       items: [
