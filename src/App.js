@@ -108,6 +108,7 @@ class App extends React.Component {
     return (
 
       <main>
+        <div className="site-tittle"><a href="https://zenseitechnologies.com/" rel="home">ZenSei Technologies</a></div>
         <div className="main">
           <div className="input-group">
             <input type="text" className="form-control" placeholder="Search Kits" />
@@ -130,6 +131,7 @@ class App extends React.Component {
              />
           ))}
         </div>
+        <div className="site-info"><a href="https://zenseitechnologies.com/" rel="home">ZenSei Technologies</a></div>
       </main>
     );
   }

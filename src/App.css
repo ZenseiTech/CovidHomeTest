@@ -54,3 +54,18 @@ body, #images, #images a {
 .card-title {
   font-weight: bold;
 }
+
+.site-info {
+  line-height: 2.375rem;
+  text-align: center;
+  color: rgb(22, 21, 21);
+}
+
+
+.site-tittle {
+  font-weight: 400;
+  font-size: 2.0736rem;
+  font-family: var(--font-headings, "PT Serif", Times,);
+  letter-spacing: normal;
+  text-align: center;
+}
