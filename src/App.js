@@ -17,21 +17,21 @@ class App extends React.Component {
       items: [
         {
           "id": 1,
-          "cardTitled": "LetsGetChecked",
-          "cardText": "The most sensitive at home test, as seen in an FDA study.",
-          "cardImage": "https://lgcassets.com/v-481/assets/3.0/images/products/home-coronavirus-test/420x420.webp",
-          "cardRedirect": apiServer + apiUrl + "LetsGetChecked",
-          "price": "$119.00",
-          "images": "../images/2days_or_less_shipping.png,../images/48_72_hours_turnaround_time.png,../images/48_hour_turnaround_time.png,../images/fda_approved.png,../images/hsa_fsa_eligible.png,../images/pre_paid_shipping.png"
-        },
-        {
-          "id": 2,
           "cardTitled": "Everlywell",
           "cardText": "Test for SARS-CoV-2 infection easily without having to visit an in-person test site. Collect your sample at home and ship it free for secure digital results within 24-72 hours of the lab receiving your sample. A telehealth consult is available to guide you through your next steps.",
           "cardImage": "https://images.ctfassets.net/ydyvnem5zkxh/2YHq8mrkE3LhSzUABt1TNo/43bd643319161f856e164b5800a3957f/COVID_Box_Transparent.png?w=600&h=400&q=75&fm=webp",
           "cardRedirect": apiServer + apiUrl + "Everlywell",
           "price": "$109.00",
-          "images": "../images/2days_or_less_shipping.png,../images/48_72_hours_turnaround_time.png,../images/fda_approved.png,../images/hsa_fsa_eligible.png,../images/pre_paid_shipping.png"
+          "images": "../images/48_hour_72_hours_turnaround_time.png,../images/fda_approved.png,../images/clia_certified.png"
+        },
+        {
+          "id": 2,
+          "cardTitled": "LetsGetChecked",
+          "cardText": "The most sensitive at home test, as seen in an FDA study.",
+          "cardImage": "https://lgcassets.com/v-481/assets/3.0/images/products/home-coronavirus-test/420x420.webp",
+          "cardRedirect": apiServer + apiUrl + "LetsGetChecked",
+          "price": "$119.00",
+          "images": "../images/48_hour_turnaround_time.png,../images/fda_approved.png,../images/clia_certified.png"
         },
         {
           "id": 3,
@@ -40,7 +40,7 @@ class App extends React.Component {
           "cardImage": "https://picturegenetics.com/assets/shop/parenting-box.png",
           "cardRedirect": apiServer + apiUrl + "Picture_by_Fulgent_Genetics",
           "price": "$109.00",
-          "images": "../images/2days_or_less_shipping.png,../images/48_72_hours_turnaround_time.png,../images/48_hour_turnaround_time.png,../images/fda_approved.png,../images/hsa_fsa_eligible.png,../images/pre_paid_shipping.png"
+          "images": "../images/48_hour_turnaround_time.png,../images/fda_approved.png,../images/clia_certified.png"
         },
         {
           "id": 4,
@@ -49,7 +49,7 @@ class App extends React.Component {
           "cardImage": "https://www.pixel.labcorp.com/sites/default/files/field/image/blog_post/covid-19_thumbnail_v4.jpg",
           "cardRedirect": apiServer + apiUrl + "Pixel_by_LabCorp",
           "price": "$0.00",
-          "images": "../images/48_72_hours_turnaround_time.png"
+          "images": "../images/fda_approved.png"
         },
         {
           "id": 5,
@@ -58,7 +58,7 @@ class App extends React.Component {
           "cardImage": "https://cdn-vitagene.pressidium.com/wp-content/uploads/2020/08/covid-19-test-kit-main-shdw.png",
           "cardRedirect": apiServer + apiUrl + "Vitagene",
           "price": "$117.00",
-          "images": "../images/2days_or_less_shipping.png,../images/fda_approved.png,../images/hsa_fsa_eligible.png,../images/pre_paid_shipping.png"
+          "images": "../images/48_hour_72_hours_turnaround_time.png,../images/fda_approved.png,../images/clia_certified.png"
         },
         {
           "id": 6,
@@ -76,7 +76,7 @@ class App extends React.Component {
           "cardImage": "https://www.vaulthealth.com/static/images/covid/hero-covid-test.jpg",
           "cardRedirect": apiServer + apiUrl + "Vault_Health",
           "price": "119.00",
-          "images": "../images/2days_or_less_shipping.png,../images/48_72_hours_turnaround_time.png,../images/48_hour_turnaround_time.png,../images/fda_approved.png,../images/hsa_fsa_eligible.png,../images/pre_paid_shipping.png"
+          "images": "../images/fda_approved.png"
         },
          {
           "id": 8,
@@ -85,7 +85,7 @@ class App extends React.Component {
           "cardImage": "https://res.cloudinary.com/forhims/image/upload/q_auto,f_auto,fl_lossy/Hims-d-Covid-PDP-Hero-03",
           "cardRedirect": apiServer + apiUrl + "For_Hers",
           "price": "150.00",
-          "images": "../images/2days_or_less_shipping.png,../images/48_72_hours_turnaround_time.png,../images/48_hour_turnaround_time.png,../images/fda_approved.png,../images/hsa_fsa_eligible.png,../images/pre_paid_shipping.png"
+          "images": "../images/fda_approved.png"
         },
          {
           "id": 9,
@@ -94,7 +94,7 @@ class App extends React.Component {
           "cardImage": "https://images.squarespace-cdn.com/content/v1/5ed7b880ff76d55e5f18e6f5/1606252112856-5T3862TSG99C0MGLSWFG/ke17ZwdGBToddI8pDm48kJE4MoaoPpgv4LNotVtbieF7gQa3H78H3Y0txjaiv_0fDoOvxcdMmMKkDsyUqMSsMWxHk725yiiHCCLfrh8O1z4YTzHvnKhyp6Da-NYroOW3ZGjoBKy3azqku80C789l0s2R59z2HWVKMNU9GXmUK4X5kVZLrUvUGmN9hO26jUWKKIKuvOYrPn_rqsrHe2ljWA/open+kit.jpg?format=500w",
           "cardRedirect": apiServer + apiUrl + "Phosphorus",
           "price": "155.00",
-          "images": "../images/2days_or_less_shipping.png,../images/48_72_hours_turnaround_time.png,../images/48_hour_turnaround_time.png,../images/fda_approved.png,../images/hsa_fsa_eligible.png,../images/pre_paid_shipping.png"
+          "images": "../images/fda_approved.png"
         },
       ]
     });
