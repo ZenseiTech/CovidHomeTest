@@ -69,3 +69,12 @@ body, #images, #images a {
   letter-spacing: normal;
   text-align: center;
 }
+
+
+.site-header {
+  font-weight: 400;
+  font-size: 2.0736rem;
+  font-family: var(--font-headings, "PT Serif", Times,);
+  letter-spacing: normal;
+  text-align: center;
+}
