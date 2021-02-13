@@ -1,27 +1,21 @@
-# Tutorial from:
-Part 1: https://blog.miguelgrinberg.com/post/how-to-create-a-react--flask-project
-Part 2: https://blog.miguelgrinberg.com/post/how-to-deploy-a-react--flask-project
 
-# connect to your AWS Linux instance
-https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/AccessingInstances.html?icmpid=docs_ec2_console
 
-https://towardsdatascience.com/deploying-a-python-web-app-on-aws-57ed772b2319
-
-# Install yarn
+### Install yarn
 brew install yarn
 
-# To run local flask
+### To run local flask
 yarn start-api
 
-# create python virtual environment
+### create python virtual environment
 python3 -m venv venv && source venv/bin/activate
 
-# Server to run flask apps...
+### Server to run flask apps...
 https://gunicorn.org/
 pip install gunicorn
 
-# To run the app in gunicorn
-#### export NODE_ENV='production'
+### To run the app in gunicorn
+export NODE_ENV='production'
+
 #### Run from the root of your app ...
 gunicorn -w 4 application:application -b 0.0.0.0:5000 --access-logfile .log/access.log --error-logfile .log/general.log
 
@@ -31,11 +25,11 @@ DEBUG=0 authbind gunicorn -b 0.0.0.0:5000 backend:app --access-logfile .log/acce
 
 <!-- "start-api": "cd api && venv/bin/flask run --no-debugger", -->
 
-# Getting Started with Create React App
+### Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+### Available Scripts
 
 In the project directory, you can run:
 
@@ -101,3 +95,13 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+
+### Tutorial from:
+Part 1: https://blog.miguelgrinberg.com/post/how-to-create-a-react--flask-project
+Part 2: https://blog.miguelgrinberg.com/post/how-to-deploy-a-react--flask-project
+
+### connect to your AWS Linux instance
+https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/AccessingInstances.html?icmpid=docs_ec2_console
+
+https://towardsdatascience.com/deploying-a-python-web-app-on-aws-57ed772b2319

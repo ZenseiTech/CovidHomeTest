@@ -108,9 +108,9 @@ class App extends React.Component {
     return (
 
       <main>
+        <div className="main">
         <div className="site-tittle"><a href="https://zenseitechnologies.com/" rel="home">ZenSei Technologies</a></div>
         <div className="site-header"><img src="../images/company_image.png" width="200" height="90" /></div>
-        <div className="main">
           <div className="input-group">
             <input type="text" className="form-control" placeholder="Search Kits" />
             <div className="input-group-append">
