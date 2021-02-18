@@ -1,3 +1,14 @@
+## At Home Test Kit
+
+The is an app the users can use to see current labs in USA that offer at home kit test for COVID 19.
+Once the user click on the Order Now button a counter is being updated in the database for later studies to which company is more popular because of price?, time around?, etc.
+ 
+ Technologies used are: Python, Flask Framework and ReactJS
+
+The app is currrently deployed in AWS Elastic Bean
+
+[http://labkits-env-2.eba-mnrfhrgm.us-east-2.elasticbeanstalk.com/]
+
 
 
 ### Install yarn
